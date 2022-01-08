@@ -13,6 +13,10 @@ const TaskRoutes = require('./routes/TaskRoutes');
 app.use('/task', TaskRoutes);
 
 
+app.get('/', function(req, res){
+    res.send({"message": "ok"})
+});
+
 
 
 

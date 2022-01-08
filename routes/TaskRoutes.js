@@ -5,10 +5,6 @@ const TaskController = require('../controller/TaskController');
 const TaskValidation = require('../middlewares/TaskValidation');
 
 
-router.get('/', function(req, res){
-    res.send({"message": "ok"})
-});
-
 
 router.post('/', TaskValidation, TaskController.create);
 // Alterar Tarefa
