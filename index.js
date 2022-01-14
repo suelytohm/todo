@@ -9,8 +9,12 @@ app.use(express.json());
 
 
 const TaskRoutes = require('./routes/TaskRoutes');
+const ClientRoutes = require('./routes/ClientRoutes');
+
 
 app.use('/task', TaskRoutes);
+app.use('/client', ClientRoutes);
+
 
 
 app.get('/', function(req, res){
