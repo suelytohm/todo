@@ -90,6 +90,7 @@ class TaskController {
         await TaskModel
         .find({
             'when': {'$lt': current},
+            'done': false,
             'macaddress': {'$in': req.params.macaddress}
         })
         .sort('when')
@@ -163,6 +164,7 @@ class TaskController {
             return res.status(500).json(err);
         });
     }        
+
 
 
 }

@@ -10,10 +10,14 @@ app.use(express.json());
 
 const TaskRoutes = require('./routes/TaskRoutes');
 const ClientRoutes = require('./routes/ClientRoutes');
+const EmpresaRoutes = require('./routes/EmpresaRoutes');
+
 
 
 app.use('/task', TaskRoutes);
 app.use('/client', ClientRoutes);
+app.use('/empresa', EmpresaRoutes);
+
 
 
 

@@ -30,4 +30,8 @@ router.get('/filter/month/:macaddress', TaskController.month);
 // Tarefas do Ano
 router.get('/filter/year/:macaddress',TaskController.year);
 
+
+
+
+
 module.exports = router;
