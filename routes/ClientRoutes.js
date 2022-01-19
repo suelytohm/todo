@@ -10,7 +10,7 @@ router.put('/:id', ClientValidation, ClientController.update);
 router.get('/', ClientController.all);
 
 router.get('/:id', ClientController.show);
-router.get('/n/niver', ClientController.teste);
+router.get('/n/niver', ClientController.n);
 
 
 

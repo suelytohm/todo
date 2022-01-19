@@ -11,6 +11,7 @@ const TaskSchema = new Schema({
     when: {type: Date, required: true},
     hora: {type: String, required: true},
     done: {type: Boolean, default: false},
+    idClient: {type: String,  required: false},
     created: {type: Date, default: Date.now()}
 });
 

@@ -68,7 +68,8 @@ class ClientController {
 
     async teste(req, res) {
         await ClientModel.find({'name': 'Suelytohm'}, function (err, person) {
-            if (err) return handleError(err);
+            if (err) 
+                return handleError(err);
             console.log(person.name, person.niver, person.phone);
           })
           .then(response => {
@@ -78,6 +79,21 @@ class ClientController {
               return res.status(500).json(error)
           })
     }
+
+
+    async n(req, res) {
+        await ClientModel.find({niver: '1994-11-22'}, function(error, data) {
+            if(error)
+                console.log(error);
+            else{
+                console.log(data);
+                return res.status(200).json(data);
+            }
+
+        })
+    }
+
+
 
 }
 
