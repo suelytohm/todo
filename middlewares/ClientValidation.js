@@ -11,6 +11,7 @@ const ClientValidation = async(req, res, next) => {
         return res.status(400).json({ error: 'Invalid description' });       
     else if(!phone)
         return res.status(400).json({ error: 'Invalid phone' });   
+        /*
     else if(!rua)
         return res.status(400).json({ error: 'Invalid rua' });
     else if(!bairro)
@@ -23,6 +24,8 @@ const ClientValidation = async(req, res, next) => {
         return res.status(400).json({ error: 'Invalid numero' }); 
     else if(!niver)
         return res.status(400).json({ error: 'Invalid niver' });      
+
+        */
         
     else{
         let exists;
