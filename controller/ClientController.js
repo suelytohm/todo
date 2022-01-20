@@ -2,6 +2,13 @@ const ClientModel = require('../model/ClientModel');
 const moment = require('moment');
 const today =  moment();
 
+
+const current = new Date();
+const mes = current.getMonth() + 1;
+const dia = current.getDate();
+
+const hoje = "0" + mes + "-" + dia;
+
 class ClientController {
 
     async create(req, res) {
@@ -52,48 +59,18 @@ class ClientController {
         })
     }
 
+
+
     async niver(req, res) {
-        await ClientModel.find()
-        //.where('niver.getDate()').equals(today.date())
-        //.where('niver.getMonth()').equals(today.month())
-        .then(response => {
-            console.log(response);
-            
-            return res.status(200).json(response)
-        })
-        .catch(error => {
-            return res.status(500).json(error)
-        })
-    }
-
-    async teste(req, res) {
-        await ClientModel.find({'name': 'Suelytohm'}, function (err, person) {
-            if (err) 
-                return handleError(err);
-            console.log(person.name, person.niver, person.phone);
-          })
-          .then(response => {
-              return res.status(200).json(response)
-          })
-          .catch(error => {
-              return res.status(500).json(error)
-          })
-    }
-
-
-    async n(req, res) {
-        await ClientModel.find({niver: '1994-11-22'}, function(error, data) {
+        await ClientModel.find(
+            {'niver': { $regex: '.*' + hoje + '.*' }}, function(error, data) {
             if(error)
                 console.log(error);
             else{
-                console.log(data);
                 return res.status(200).json(data);
             }
-
         })
     }
-
-
 
 }
 
