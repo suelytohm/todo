@@ -64,6 +64,21 @@ class TaskController {
         })
     }
 
+
+    async showHistorico(req, res) {
+        await TaskModel.find(
+            {
+                idClient: req.params.idCliente
+            }, 
+            function(error, data) {
+                if(data)
+                    return res.status(200).json(data);
+                else
+                    return res.status(404).json({ error: "Nenhum agendamento encontrado!"});
+        })
+    }
+
+
     async delete(req, res) {
         await TaskModel.deleteOne({ '_id': req.params.id })
         .then(response => {

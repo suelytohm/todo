@@ -11,6 +11,8 @@ router.post('/', TaskValidation, TaskController.create);
 router.put('/:id', TaskValidation, TaskController.update);
 // Trazer única tarefa
 router.get('/:id', TaskController.show);
+// Histórico do Cliente
+router.get('/client/:idCliente', TaskController.showHistorico);
 // Apagar Tarefa
 router.delete('/:id', TaskController.delete);
 // Update Done
