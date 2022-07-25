@@ -12,6 +12,7 @@ const TaskSchema = new Schema({
     hora: {type: String, required: true},
     done: {type: Boolean, default: false},
     idClient: {type: String,  required: false},
+    idEmpresa: {type: String,  required: false},
     created: {type: Date, default: Date.now()}
 });
 
