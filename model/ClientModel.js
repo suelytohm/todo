@@ -6,7 +6,7 @@ const ClientSchema = new Schema({
     type: {type: Number, required: true},
     idEmpresa: {type: Number, required: false},
     name: {type: String,  required: true},
-    description: {type: String, required: true},
+    description: {type: String, required: false},
     phone: {type: String, required: false},
     rua: {type: String, required: false},
     bairro: {type: String, required: false},
