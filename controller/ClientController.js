@@ -10,11 +10,8 @@ let hoje = "0";
 
 if(mes.toString().length == 1){
     hoje = "0" + mes + "-" + dia;
-    // console.log(hoje);
 }else{
     hoje = mes + "-" + dia;
-    // console.log(hoje);
-
 }
 
 

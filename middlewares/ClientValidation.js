@@ -6,11 +6,7 @@ const ClientValidation = async(req, res, next) => {
     if(!type)
         return res.status(400).json({ error: 'Invalid type' });
     else if(!name)
-        return res.status(400).json({ error: 'Invalid name' });
-    else if(!description)
-        return res.status(400).json({ error: 'Invalid description' });       
-    else if(!phone)
-        return res.status(400).json({ error: 'Invalid phone' });   
+        return res.status(400).json({ error: 'Invalid name' }); 
         /*
     else if(!rua)
         return res.status(400).json({ error: 'Invalid rua' });
